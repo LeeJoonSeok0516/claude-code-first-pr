@@ -1,0 +1,22 @@
+From: support@vendor.com
+To: admin@company.com
+Subject: System Maintenance Notice - Service Window
+Date: Thu, 18 Jan 2024 09:00:00 +0900
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Hello,
+
+This is to inform you about an upcoming maintenance window for our services.
+
+Scheduled Maintenance:
+Date: January 25, 2024
+Time: 2:00 AM - 6:00 AM (UTC+9)
+Duration: Approximately 4 hours
+Affected Services: API, Web Portal, Mobile App
+
+During this window, services will be unavailable. Please plan accordingly.
+
+Thank you for your understanding.
+
+Support Team

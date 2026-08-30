@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config *)",
+      "Bash(find ~ -maxdepth 3 -name \".git\" -type d 2>/dev/null | head -20)",
+      "WebFetch(domain:api.github.com)",
+      "PowerShell(gh auth login)",
+      "PowerShell(winget install GitHub.cli)",
+      "PowerShell(winget install GitHub.cli --accept-source-agreements --accept-package-agreements)",
+      "PowerShell(git config user.name \"LeeJoonSeok0516\")",
+      "PowerShell(git config user.email \"papas0516@gmail.com\")"
+    ]
+  }
+}

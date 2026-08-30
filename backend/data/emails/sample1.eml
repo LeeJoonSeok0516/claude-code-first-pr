@@ -1,0 +1,24 @@
+From: john.doe@example.com
+To: recipient@example.com
+Subject: Project Update - Q1 2024
+Date: Mon, 15 Jan 2024 10:30:00 +0900
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Hello,
+
+Here is the project update for Q1 2024. We have made significant progress on the core features and are on track to meet our deadlines.
+
+Key accomplishments:
+- Completed backend API integration
+- Implemented user authentication
+- Designed new dashboard UI
+
+Next steps:
+- Begin frontend development
+- Set up automated testing
+- Prepare for beta launch
+
+Best regards,
+John Doe
+Project Manager
