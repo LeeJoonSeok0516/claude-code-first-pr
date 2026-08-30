@@ -9,6 +9,19 @@
       <button @click="fetchEmails" :disabled="loading" class="btn-primary">
         {{ loading ? 'Analyzing...' : 'Analyze EML Files' }}
       </button>
+
+      <label class="btn-secondary">
+        📁 Select Folder
+        <input
+          ref="folderInput"
+          type="file"
+          @change="handleFolderSelect"
+          webkitdirectory
+          multiple
+          style="display: none"
+        />
+      </label>
+
       <div class="stats" v-if="emails.length > 0">
         <span>Total: {{ emails.length }} emails</span>
       </div>
@@ -82,11 +95,56 @@ export default {
       return text.length > length ? text.substring(0, length) + '...' : text
     }
 
+    const handleFolderSelect = async (event) => {
+      const files = event.target.files
+      if (!files || files.length === 0) {
+        error.value = 'No files selected'
+        return
+      }
+
+      loading.value = true
+      error.value = null
+
+      try {
+        const formData = new FormData()
+
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i]
+          if (file.name.toLowerCase().endsWith('.eml')) {
+            formData.append('files', file)
+          }
+        }
+
+        if (formData.getAll('files').length === 0) {
+          error.value = 'No .eml files found in the selected folder'
+          loading.value = false
+          return
+        }
+
+        const response = await axios.post('/api/emails/analyze-files', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        })
+
+        if (response.data.success) {
+          emails.value = response.data.data
+        } else {
+          error.value = response.data.message || 'Failed to analyze files'
+        }
+      } catch (err) {
+        error.value = `Error: ${err.message}`
+      } finally {
+        loading.value = false
+      }
+    }
+
     return {
       emails,
       loading,
       error,
       fetchEmails,
+      handleFolderSelect,
       truncateText
     }
   }
@@ -145,6 +203,23 @@ export default {
 .btn-primary:disabled {
   background: #999;
   cursor: not-allowed;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background: #38a169;
 }
 
 .stats {
