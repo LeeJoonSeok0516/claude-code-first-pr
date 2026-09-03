@@ -1,0 +1,20 @@
+From: alice.smith@company.com
+To: team@company.com
+Subject: Weekly Team Meeting - Action Items
+Date: Wed, 17 Jan 2024 14:15:00 +0900
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Team,
+
+Thank you for attending today's meeting. Here are the action items assigned:
+
+1. Alice - Database optimization (Due: Friday)
+2. Bob - API documentation (Due: Next Monday)
+3. Charlie - Bug fixes for module X (Due: Thursday)
+
+Please update status in the project tracker by EOD Thursday.
+
+Regards,
+Alice Smith
+Team Lead

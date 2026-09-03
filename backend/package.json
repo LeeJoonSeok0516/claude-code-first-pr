@@ -1,0 +1,23 @@
+{
+  "name": "eml-analyzer-backend",
+  "version": "1.0.0",
+  "description": "EML file analyzer backend API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["eml", "email", "analyzer"],
+  "author": "LeeJoonSeok0516",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "mailparser": "^3.6.7",
+    "uuid": "^9.0.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
