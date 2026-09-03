@@ -70,6 +70,61 @@
   cursor: not-allowed;
 }
 
+.btn-secondary {
+  padding: 14px 24px;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #38a169;
+}
+
+.btn-secondary:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.help-section {
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 16px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #1976d2;
+  font-size: 0.95em;
+}
+
+.help-section p {
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.help-section ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.help-section li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.help-section code {
+  background: rgba(25, 118, 210, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+}
+
 .error-box {
   background: #fee;
   color: #c33;
@@ -168,6 +223,22 @@
   color: #333;
 }
 
+.line-no {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.path-cell {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #666;
+  max-width: 300px;
+  overflow: auto;
+  white-space: nowrap;
+}
+
 .lang-badge {
   display: inline-block;
   padding: 4px 12px;
@@ -201,4 +272,80 @@
   border-radius: 8px;
   color: #999;
   font-size: 1.1em;
+}
+
+.tabs-container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+  background: #fafafa;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  background: #e8e8e8;
+  border: 1px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.3s;
+  margin-right: 5px;
+}
+
+.tab-button:hover {
+  background: #ddd;
+  color: #333;
+}
+
+.tab-button.active {
+  background: white;
+  color: #667eea;
+  border-bottom: 2px solid #667eea;
+  font-weight: 700;
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+.diagram-container {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.relationship-diagram {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.diagram-legend {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.legend-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #333;
 }
